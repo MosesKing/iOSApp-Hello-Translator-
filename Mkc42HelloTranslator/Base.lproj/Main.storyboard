@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0HO-gN-h4n">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Languages-->
+        <scene sceneID="qWI-Qg-CwX">
+            <objects>
+                <tableViewController id="2pj-qH-hoz" customClass="LanguageTableViewController" customModule="Mkc42HelloTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0ba-uA-njK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listofLanguages" textLabel="4td-2a-DgT" style="IBUITableViewCellStyleDefault" id="HiH-NW-cQF">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HiH-NW-cQF" id="fy7-nz-ZQ8">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Languages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4td-2a-DgT">
+                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="KCP-6x-o8r" kind="show" id="oyG-VX-0uQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2pj-qH-hoz" id="PjD-W7-wob"/>
+                            <outlet property="delegate" destination="2pj-qH-hoz" id="3dU-iA-0oh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Languages" id="4Df-R7-0ps"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YvZ-p4-M1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="-339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Va9-mM-V1g">
+            <objects>
+                <navigationController id="0HO-gN-h4n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NXB-v5-dkN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2pj-qH-hoz" kind="relationship" relationship="rootViewController" id="qaJ-lJ-4Gp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tqn-Ro-vDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1463" y="-338"/>
+        </scene>
+        <!--Language View Controller-->
+        <scene sceneID="JGN-Ci-svE">
+            <objects>
+                <viewController id="KCP-6x-o8r" customClass="LanguageViewController" customModule="Mkc42HelloTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t3N-uu-4ID"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Wh-2K-qcc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PPv-CG-Ghx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNi-jk-mps">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xNi-jk-mps" firstAttribute="centerX" secondItem="PPv-CG-Ghx" secondAttribute="centerX" id="KcW-SE-tRf"/>
+                            <constraint firstItem="xNi-jk-mps" firstAttribute="centerY" secondItem="PPv-CG-Ghx" secondAttribute="centerY" id="qio-nP-Ckp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTranslator" destination="xNi-jk-mps" id="ods-Oo-7qF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ip5-2N-l6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213.59999999999999" y="-339.58020989505252"/>
+        </scene>
+    </scenes>
+</document>
